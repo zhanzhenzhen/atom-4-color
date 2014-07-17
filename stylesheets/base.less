@@ -1,20 +1,20 @@
 @import "syntax-variables";
 
 .editor-colors {
-  background-color: @background-color;
+  background-color: @syntax-background-color;
   color: @code-color;
 }
 
 .editor {
-  background-color: @background-color;
+  background-color: @syntax-background-color;
   color: @code-color;
 
   .wrap-guide {
-    background-color: @wrap-guide-color;
+    background-color: @syntax-wrap-guide-color;
   }
 
   .indent-guide {
-    color: @indent-guide-color;
+    color: @syntax-indent-guide-color;
   }
 
   .gutter .line-number.folded,
@@ -28,18 +28,17 @@
   }
 
   .selection .region {
-    background-color: @selection-color;
+    background-color: @syntax-selection-color;
   }
 }
 
 .editor .search-results .marker .region {
   border: none;
-  background-color: @result-marker-color;
-  //border: 0.1em solid @result-marker-border-color;
+  background-color: @syntax-result-marker-color;
 }
 
 .editor .search-results .marker.current-result .region {
-  background-color: @result-marker-selected-color;
+  background-color: @syntax-result-marker-color-selected;
   border: 0.1em solid @result-marker-selected-border-color;
 }
 
