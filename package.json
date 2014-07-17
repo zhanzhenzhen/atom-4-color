@@ -1,0 +1,11 @@
+{
+    "name": "4-color-light",
+    "theme": "syntax",
+    "version": "0.1.0",
+    "description": "4 Colors.",
+    "repository": "https://github.com/zhanzhenzhen/atom-4-color-light",
+    "license": "MIT",
+    "engines": {
+        "atom": ">0.50.0"
+    }
+}

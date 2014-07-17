@@ -1,0 +1,100 @@
+@import "syntax-variables";
+
+.editor-colors {
+  background-color: @background-color;
+  color: @code-color;
+}
+
+.editor {
+  background-color: @background-color;
+  color: @code-color;
+
+  .wrap-guide {
+    background-color: @wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @indent-guide-color;
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .invisible {
+    color: @code-color;
+  }
+
+  .selection .region {
+    background-color: @selection-color;
+  }
+}
+
+.editor .search-results .marker .region {
+  border: none;
+  background-color: @result-marker-color;
+  //border: 0.1em solid @result-marker-border-color;
+}
+
+.editor .search-results .marker.current-result .region {
+  background-color: @result-marker-selected-color;
+  border: 0.1em solid @result-marker-selected-border-color;
+}
+
+.comment {
+  color: @comment-color;
+}
+
+.keyword {
+  color: @keyword-color;
+}
+
+.storage {
+  color: @keyword-color;
+}
+
+
+.punctuation.html:not(.constant),
+.punctuation.xml:not(.constant) {
+  color: @keyword-color;
+}
+
+.meta.tag.xml, .meta.tag.html {
+  color: @keyword-color;
+}
+
+.entity {
+  &.tag {
+    color: @keyword-color;
+  }
+
+  &.attribute-name {
+    color: @keyword-color;
+  }
+
+  &.constant.character {
+    color: @quote-color;
+  }
+}
+
+.string:not(.xml):not(.html) {
+  color: @quote-color;
+}
+
+.string.xml, .string.html {
+  color: @code-color;
+}
+
+.support.property-name {
+    color: @keyword-color;
+}
+
+.none {
+  color: @code-color;
+}
+
+.editor.mini .scroll-view {
+  padding-left: 1px;
+}
