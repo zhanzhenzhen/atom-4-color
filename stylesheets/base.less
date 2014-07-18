@@ -58,6 +58,12 @@
     border: 0.1em solid @result-marker-selected-border-color;
 }
 
+.bracket-matcher {
+    background-color: hsl(0,0%,80%);
+    opacity: 0.6;
+    border-bottom: 0 none;
+}
+
 // If this is not added, the markdown font will be "antialiased",
 // which is too bright.
 .source .gfm {
@@ -76,40 +82,12 @@
     color: @keyword-color;
 }
 
-
-.punctuation.html:not(.constant),
-.punctuation.xml:not(.constant) {
-    color: @keyword-color;
-}
-
-.constant:not(.xml):not(.html) {
+.constant, .constant * {
     color: @code-color;
 }
 
-.meta.tag.xml, .meta.tag.html {
-    color: @keyword-color;
-}
-
-.entity {
-    &.tag {
-        color: @keyword-color;
-    }
-
-    &.attribute-name {
-        color: @keyword-color;
-    }
-
-    &.constant.character {
-        color: @quote-color;
-    }
-}
-
-.string:not(.xml):not(.html) {
+.string {
     color: @quote-color;
-}
-
-.string.xml, .string.html {
-    color: @code-color;
 }
 
 .support.property-name {
@@ -132,8 +110,24 @@
     }
 }
 
-.bracket-matcher {
-    background-color: hsl(0,0%,80%);
-    opacity: 0.6;
-    border-bottom: 0 none;
+.xml, .html {
+    &.tag {
+        color: @keyword-color;
+    }
+
+    &.attribute-name {
+        color: @keyword-color;
+    }
+
+    &.string {
+        color: @code-color;
+    }
+
+    &.punctuation {
+        color: @keyword-color;
+    }
+
+    &.constant, &.constant * {
+        color: @quote-color;
+    }
 }
