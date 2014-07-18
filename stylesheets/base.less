@@ -1,105 +1,105 @@
 @import "syntax-variables";
 
 .editor-colors {
-  background-color: @syntax-background-color;
-  color: @code-color;
+    background-color: @syntax-background-color;
+    color: @code-color;
 }
 
 .editor {
-  background-color: @syntax-background-color;
-  color: @code-color;
+    background-color: @syntax-background-color;
+    color: @code-color;
 
-  .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
-  }
-
-  .indent-guide {
-    color: @syntax-indent-guide-color;
-  }
-
-  .invisible-character {
-    color: @syntax-invisible-character-color;
-  }
-
-  .gutter {
-    background-color: @syntax-gutter-background-color;
-    color: @syntax-gutter-text-color;
-
-    .line-number {
-      &.cursor-line {
-        background-color: @syntax-gutter-background-color-selected;
-        color: @syntax-gutter-text-color-selected;
-      }
-
-      &.cursor-line-no-selection {
-        color: @syntax-gutter-text-color-selected;
-      }
+    .wrap-guide {
+        background-color: @syntax-wrap-guide-color;
     }
-  }
 
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    color: hsl(0,0%,60%);
-  }
+    .indent-guide {
+        color: @syntax-indent-guide-color;
+    }
 
-  .selection .region {
-    background-color: @syntax-selection-color;
-  }
+    .invisible-character {
+        color: @syntax-invisible-character-color;
+    }
+
+    .gutter {
+        background-color: @syntax-gutter-background-color;
+        color: @syntax-gutter-text-color;
+
+        .line-number {
+            &.cursor-line {
+                background-color: @syntax-gutter-background-color-selected;
+                color: @syntax-gutter-text-color-selected;
+            }
+
+            &.cursor-line-no-selection {
+                color: @syntax-gutter-text-color-selected;
+            }
+        }
+    }
+
+    .gutter .line-number.folded,
+    .gutter .line-number:after,
+    .fold-marker:after {
+        color: hsl(0,0%,60%);
+    }
+
+    .selection .region {
+        background-color: @syntax-selection-color;
+    }
 }
 
 .editor .search-results .marker .region {
-  border: none;
-  background-color: @syntax-result-marker-color;
+    border: none;
+    background-color: @syntax-result-marker-color;
 }
 
 .editor .search-results .marker.current-result .region {
-  background-color: @syntax-result-marker-color-selected;
-  border: 0.1em solid @result-marker-selected-border-color;
+    background-color: @syntax-result-marker-color-selected;
+    border: 0.1em solid @result-marker-selected-border-color;
 }
 
 .comment {
-  color: @comment-color;
+    color: @comment-color;
 }
 
 .keyword {
-  color: @keyword-color;
+    color: @keyword-color;
 }
 
 .storage {
-  color: @keyword-color;
+    color: @keyword-color;
 }
 
 
 .punctuation.html:not(.constant),
 .punctuation.xml:not(.constant) {
-  color: @keyword-color;
+    color: @keyword-color;
 }
 
 .meta.tag.xml, .meta.tag.html {
-  color: @keyword-color;
+    color: @keyword-color;
 }
 
 .entity {
-  &.tag {
-    color: @keyword-color;
-  }
+    &.tag {
+        color: @keyword-color;
+    }
 
-  &.attribute-name {
-    color: @keyword-color;
-  }
+    &.attribute-name {
+        color: @keyword-color;
+    }
 
-  &.constant.character {
-    color: @quote-color;
-  }
+    &.constant.character {
+        color: @quote-color;
+    }
 }
 
 .string:not(.xml):not(.html) {
-  color: @quote-color;
+    color: @quote-color;
 }
 
 .string.xml, .string.html {
-  color: @code-color;
+    color: @code-color;
 }
 
 .support.property-name {
@@ -107,9 +107,15 @@
 }
 
 .none {
-  color: @code-color;
+    color: @code-color;
 }
 
 .editor.mini .scroll-view {
-  padding-left: 1px;
+    padding-left: 1px;
+}
+
+.bracket-matcher {
+    background-color: hsl(0,0%,80%);
+    opacity: 0.7;
+    border-bottom: 0 none;
 }
