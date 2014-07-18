@@ -106,12 +106,20 @@
     color: @keyword-color;
 }
 
-.none {
-    color: @code-color;
-}
+// String interpolation in Ruby, CoffeeScript, and others
+.source .string {
+    .source,
+    .meta.embedded.line {
+        color: @code-color;
+    }
 
-.editor.mini .scroll-view {
-    padding-left: 1px;
+    .punctuation.section.embedded {
+        color: @code-color;
+
+        .source {
+            color: @code-color; // Required for the end of embedded strings in Ruby #716
+        }
+    }
 }
 
 .bracket-matcher {
