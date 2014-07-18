@@ -58,6 +58,12 @@
     border: 0.1em solid @result-marker-selected-border-color;
 }
 
+// If this is not added, the markdown font will be "antialiased",
+// which is too bright.
+.source .gfm {
+    -webkit-font-smoothing: auto;
+}
+
 .comment {
     color: @comment-color;
 }
