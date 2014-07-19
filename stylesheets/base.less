@@ -79,14 +79,6 @@
         color: @keyword-color;
     }
 
-    .support.property-name {
-        color: @keyword-color;
-    }
-
-    .storage {
-        color: @keyword-color;
-    }
-
     .string {
         color: @quote-color;
     }
@@ -111,7 +103,14 @@
         color: @code-color;
     }
 
-    .entity.name.tag {
+    .tag {
+        color: @code-color;
+    }
+}
+
+// workaround a JS parser bug
+.js {
+    &.storage.modifier, &.storage.function {
         color: @keyword-color;
     }
 }
