@@ -64,50 +64,56 @@
     border-bottom: 0 none;
 }
 
-// If this is not added, the markdown font will be "antialiased",
-// which is too bright.
-.gfm {
-    -webkit-font-smoothing: auto;
-}
-
-.comment {
-    color: @comment-color;
-}
-
-.keyword:not(.unit):not(.special-method) {
-    color: @keyword-color;
-}
-
-.support.property-name {
-    color: @keyword-color;
-}
-
-.storage {
-    color: @keyword-color;
-}
-
-.string {
-    color: @quote-color;
-}
-
-// String interpolation in Ruby, CoffeeScript, and others
-.string {
-    .source,
-    .meta.embedded.line {
-        color: @code-color;
+.source {
+    // If this is not added, the markdown font will be "antialiased",
+    // which is too bright.
+    .gfm {
+        -webkit-font-smoothing: auto;
     }
 
-    .punctuation.section.embedded {
-        color: @code-color;
+    .comment {
+        color: @comment-color;
+    }
 
-        .source {
-            color: @code-color; // Required for the end of embedded strings in Ruby #716
+    .keyword:not(.unit):not(.special-method) {
+        color: @keyword-color;
+    }
+
+    .support.property-name {
+        color: @keyword-color;
+    }
+
+    .storage {
+        color: @keyword-color;
+    }
+
+    .string {
+        color: @quote-color;
+    }
+
+    // String interpolation in Ruby, CoffeeScript, and others
+    .string {
+        .source,
+        .meta.embedded.line {
+            color: @code-color;
+        }
+
+        .punctuation.section.embedded {
+            color: @code-color;
+
+            .source {
+                color: @code-color; // Required for the end of embedded strings in Ruby #716
+            }
         }
     }
-}
 
-.constant, .constant * {
-    color: @code-color;
+    .constant {
+        color: @code-color;
+    }
+
+    .entity.name.tag {
+        color: @keyword-color;
+    }
 }
 
 .xml, .html {
@@ -125,6 +131,10 @@
 
     &.punctuation:not(&.comment) {
         color: @keyword-color;
+    }
+
+    &.comment {
+        color: @comment-color;
     }
 
     &.constant, &.constant * {
