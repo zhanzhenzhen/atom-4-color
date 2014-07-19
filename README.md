@@ -1,1 +1,3 @@
-# 4-color-light theme
+# 4-color Syntax Theme
+
+Install this if you hate too many colors.
