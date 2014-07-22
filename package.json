@@ -5,6 +5,9 @@
     "description": "For those who hate too many colors.",
     "repository": "https://github.com/zhanzhenzhen/atom-4-color",
     "license": "MIT",
+    "dependencies": {
+        "4-color-base": "0.1.0"
+    },
     "engines": {
         "atom": ">0.50.0"
     }

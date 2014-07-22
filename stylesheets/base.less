@@ -1,142 +1,26 @@
-@import "syntax-variables";
+@code-color: hsl(0,0%,0%);
+@keyword-color: hsl(210,60%,50%);
+@string-color: hsl(120,100%,28%);
+@comment-color: hsl(60,7.5%,57%);
 
-.editor-colors {
-    background-color: @syntax-background-color;
-    color: @code-color;
-}
+@syntax-background-color: hsl(0,0%,100%);
+@syntax-cursor-color: @code-color;
+@syntax-selection-color: hsl(210,60%,88%);
 
-.editor {
-    background-color: @syntax-background-color;
-    color: @code-color;
+@syntax-wrap-guide-color: hsl(0,0%,86%);
+@syntax-indent-guide-color: hsl(0,0%,92%);
 
-    .wrap-guide {
-        background-color: @syntax-wrap-guide-color;
-    }
+@syntax-result-marker-color: hsl(50,100%,50%);
+@syntax-result-marker-color-selected: hsl(0,100%,86%);
+@result-marker-selected-border-color: hsl(0,100%,70%);
 
-    .indent-guide {
-        color: @syntax-indent-guide-color;
-    }
+@syntax-gutter-text-color: hsl(0,0%,50%);
 
-    .invisible-character {
-        color: @syntax-invisible-character-color;
-    }
+@syntax-color-renamed: #96CBFE;
+@syntax-color-added: #718C00;
+@syntax-color-modified: #ff982d;
+@syntax-color-removed: #D14;
 
-    .gutter {
-        background-color: @syntax-gutter-background-color;
-        color: @syntax-gutter-text-color;
+@bracket-matcher-color: hsl(0,0%,80%);
 
-        .line-number {
-            &.cursor-line {
-                background-color: @syntax-gutter-background-color-selected;
-                color: @syntax-gutter-text-color-selected;
-            }
-
-            &.cursor-line-no-selection {
-                color: @syntax-gutter-text-color-selected;
-            }
-        }
-    }
-
-    .gutter .line-number.folded,
-    .gutter .line-number:after,
-    .fold-marker:after {
-        color: hsl(0,0%,60%);
-    }
-
-    .selection .region {
-        background-color: @syntax-selection-color;
-    }
-}
-
-.editor .search-results .marker .region {
-    border: none;
-    background-color: @syntax-result-marker-color;
-}
-
-.editor .search-results .marker.current-result .region {
-    background-color: @syntax-result-marker-color-selected;
-    border: 0.1em solid @result-marker-selected-border-color;
-}
-
-.bracket-matcher {
-    background-color: hsl(0,0%,80%);
-    opacity: 0.6;
-    border-bottom: 0 none;
-}
-
-.source {
-    // If this is not added, the markdown font will be "antialiased",
-    // which is too bright.
-    .gfm {
-        -webkit-font-smoothing: auto;
-    }
-
-    .comment {
-        color: @comment-color;
-    }
-
-    .keyword:not(.unit):not(.special-method) {
-        color: @keyword-color;
-    }
-
-    .string {
-        color: @quote-color;
-    }
-
-    // String interpolation in Ruby, CoffeeScript, and others
-    .string {
-        .source,
-        .meta.embedded.line {
-            color: @code-color;
-        }
-
-        .punctuation.section.embedded {
-            color: @code-color;
-
-            .source {
-                color: @code-color; // Required for the end of embedded strings in Ruby #716
-            }
-        }
-    }
-
-    .constant {
-        color: @code-color;
-    }
-
-    .tag {
-        color: @code-color;
-    }
-}
-
-// workaround a JS parser bug
-.js {
-    &.storage.modifier, &.storage.function {
-        color: @keyword-color;
-    }
-}
-
-.xml, .html {
-    &.tag {
-        color: @keyword-color;
-    }
-
-    &.attribute-name {
-        color: @keyword-color;
-    }
-
-    &.string {
-        color: @code-color;
-    }
-
-    &.punctuation:not(&.comment) {
-        color: @keyword-color;
-    }
-
-    &.comment {
-        color: @comment-color;
-    }
-
-    &.constant, &.constant * {
-        color: @quote-color;
-    }
-}
+@import "../node_modules/4-color-base/src/base.less";
