@@ -1,7 +1,7 @@
 {
     "name": "4-color",
     "theme": "syntax",
-    "version": "0.2.10",
+    "version": "0.2.11",
     "description": "This light syntax theme is for those who hate too many colors.",
     "repository": "https://github.com/zhanzhenzhen/atom-4-color",
     "license": "MIT",
@@ -9,6 +9,6 @@
         "atom-4-color-base": "0.2.3"
     },
     "engines": {
-        "atom": ">=0.207.0"
+        "atom": ">=0.208.0"
     }
 }
