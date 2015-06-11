@@ -6,7 +6,7 @@
     "repository": "https://github.com/zhanzhenzhen/atom-4-color",
     "license": "MIT",
     "dependencies": {
-        "atom-4-color-base": "0.2.6"
+        "atom-4-color-base": "0.2.7"
     },
     "engines": {
         "atom": ">=0.208.0"
